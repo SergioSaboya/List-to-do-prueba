@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .white{
+            background-color:white;
+        }
+        .red{
+            background-color:red;
+            padding: 2rem;
+        }
+        .seleccionado{
+            gap: 2px;
+            background-color:blue;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+       
+        <li >cdsdcs</li>
+        <li >cdsdcs</li>
+        <li >cdsdcs</li>
+        <li >cdsdcs</li>
+    </ul>
+    <button>Eliminar</button>
+
+<script>
+    const ul =document.querySelector('ul')
+    const li =document.querySelector('li')
+    const botonEliminar =document.querySelector('button')
+    const seleccionados =[]
+
+    
+
+    ul.childNodes.forEach(function(item){
+        item.addEventListener('click',(e)=>{
+            const result = item.classList.toggle('seleccionado')
+            return verificarClase(item)
+        
+        })
+    })
+
+    const verificarClase=(item)=>{
+    if(item.value == 'seleccionado'){
+        seleccionados.unshift(item)
+    //     console.log(seleccionados)
+    // }
+    // console.log(item.classList.value)
+    console.log(seleccionados)
+    }
+
+
+
+    // if(ul.classList.value == 'white'){
+    // console.log('tiene la clase white')
+    // }
+    // else{
+    //     console.log('no tiene la clase white')
+    // }
+</script>
+
+</body>
+</html>
